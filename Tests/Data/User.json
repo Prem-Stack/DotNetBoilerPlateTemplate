@@ -1,0 +1,53 @@
+/*
+This computer program, as defined in the Copyright, Designs and Patents Act 1998 and the Software Directive (2009/24/EC),
+is the copyright of Logic Valley Ltd, a wholly owned subsidiary of Marston (Holdings) Ltd. All rights are reserved.
+*/
+{
+  "GetByIdPositive": [
+    [
+      5,
+      {
+        "firstName": "TestName",
+        "lastName": "Test lastName",
+        "dob": "1991-02-13T00:00:00",
+        "gender": "Male",
+        "id": 1
+      },
+      1
+    ]
+  ],
+  "CreateUserPositive": [
+    [
+      {
+        "firstName": "TestName",
+        "lastName": "Test lastName",
+        "dob": "1991-02-13T00:00:00",
+        "gender": "Male",
+        "id": 1
+      },
+      1
+    ]
+  ],
+  "CreateUserFluentValidation": [
+    [
+      {
+        "firstName": "TestName12345",
+        "lastName": "Test",
+        "dob": "1991-02-13T00:00:00",
+        "gender": "Male",
+        "id": 1
+      },
+      "Length should be below 12"
+    ],
+    [
+      {
+        "firstName": "TestName",
+        "lastName": "Test",
+        "dob": "1991-02-13T00:00:00",
+        "gender": "",
+        "id": 1
+      },
+      "'User Gender' must not be empty."
+    ]
+  ]
+}
